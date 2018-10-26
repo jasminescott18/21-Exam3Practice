@@ -221,7 +221,7 @@ def practice_problem3(start, n, threshold):
     """
 
     sequence = []
-    for k in range():
+    for k in range(20):
         value = math.cos(start) + math.sin(start)
         if value > threshold:
             sequence = sequence + [start]
