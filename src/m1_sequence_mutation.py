@@ -31,9 +31,27 @@ def run_test_zero_changer():
     print('  Actual:  ', test1)
 
     # ------------------------------------------------------------------
-    # TODO: 2. Write at least 2 additional tests for the  zero_changer   function.
+    # COMPLETED: 2. Write at least 2 additional tests for the  zero_changer   function.
     #   Try do do some unexpected things like empty lists or an empty tuple.
     # ------------------------------------------------------------------
+
+    # Test 2:
+    test2 = ([1, 0, 0, 4, 5], [6, 0, 8], [4, 4, 4], [0, 1, 6])
+    expected2 = ([1, 1, 2, 4, 5], [6, 3, 8], [4, 4, 4], [4, 1, 6])
+    zero_changer(test2)
+    print()
+    print('Test 2:')
+    print('  Expected:', expected2)
+    print('  Actual:  ', test2)
+
+    # Test 3:
+    test3 = ([4, 5], [33, 22, 11, 0], [1, 2, 4], [88, 0, 23])
+    expected3 = ([4, 5], [33, 22, 11, 1], [1, 2, 4], [88, 2, 23])
+    zero_changer(test3)
+    print()
+    print('Test 3:')
+    print('  Expected:', expected3)
+    print('  Actual:  ', test3)
 
 
 def zero_changer(tuple_of_lists):
@@ -61,7 +79,7 @@ def zero_changer(tuple_of_lists):
       :type tuple_of_lists: tuple of list[int]
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # COMPLETED: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -70,6 +88,13 @@ def zero_changer(tuple_of_lists):
     #    TIME ESTIMATE:  10 minutes.
     # ------------------------------------------------------------------
 
+    count = 0
+    for i in range(len(tuple_of_lists)):
+        sequence = tuple_of_lists[i]
+        for j in range(len(sequence)):
+            if sequence[j] == 0:
+                count = count + 1
+                sequence[j] = count
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
