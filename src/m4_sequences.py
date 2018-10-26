@@ -214,7 +214,6 @@ def practice_problem4b(sequence):
             index_of_max = i
     return numbers[index_of_max]
 
-
     # ------------------------------------------------------------------
     # COMPLETED: 3. Implement and test this function.
     #     The testing code is already written for you (above).
