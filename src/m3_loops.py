@@ -229,7 +229,6 @@ def practice_problem3(start, n, threshold):
         if len(sequence) == n:
             return sequence
 
-
     ####################################################################
     # COMPLETED: 3. Implement and test this function.
     #          Some tests are already written for you (above),
