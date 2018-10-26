@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  SEQUENCES.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jasmine Scott.
+"""  # COMPLETED: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -133,8 +133,14 @@ def practice_problem4a(sequence):
     Type hints:
       :type sequence: list | tuple | string
     """
+    numbers = []
+    for k in range(0, len(sequence) - 1):
+        if sequence[k] == sequence[k + 1]:
+            numbers = numbers + [k]
+    return numbers
+
     ####################################################################
-    # TODO: 2. Implement and test this function.
+    # COMPLETED Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -196,8 +202,21 @@ def practice_problem4b(sequence):
     Type hints:
       :type sequence: (list | tuple) of (float | int)
     """
+
+    numbers = []
+    index_of_max = 0
+    for k in range(len(sequence)):
+        if k % 2 == 0:
+            numbers = numbers + [sequence[k]]
+    print(numbers)
+    for i in range(len(numbers)):
+        if numbers[index_of_max] < numbers[i]:
+            index_of_max = i
+    return numbers[index_of_max]
+
+
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # COMPLETED: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -295,7 +314,7 @@ def practice_problem4c(points):
       :rtype: rg.Point | string
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # COMPLETED: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # IMPORTANT: This problem is your LOWEST PRIORITY for preparing
@@ -306,6 +325,19 @@ def practice_problem4c(points):
     #    DIFFICULTY:      9
     #    TIME ESTIMATE:   15 minutes.
     ####################################################################
+
+    for k in range(len(points)):
+        sequence = points[k]
+        value = sequence
+        clone_x = value.x
+        clone_y = value.y
+        if is_prime(value.x):
+            if is_prime(value.y):
+                value.x = clone_y
+                value.y = clone_x
+                new_point = rg.Point(value.x, value.y)
+                return new_point
+        return 'Not Found'
 
 
 def run_test_practice_problem4d():
@@ -390,8 +422,16 @@ def practice_problem4d(sequence):
       :type sequence: (list | tuple) of int
       :rtype: int
     """
+    total = 0
+    for k in range(len(sequence) - 1):
+        if is_prime(sequence[k]):
+            if is_prime(sequence[k + 1]):
+                if sequence[k] != sequence[k + 1]:
+                    total = total + sequence[k]
+    return total
+
     ####################################################################
-    # TODO: 5. Implement and test this function.
+    # COMPLETED: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
