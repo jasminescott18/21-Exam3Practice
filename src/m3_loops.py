@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  FOR and WHILE loops.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jasmine Scott.
+"""  # COMPLETED: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -45,7 +45,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ####################################################################
-    # TODO: 2. Implement this TEST function.
+    # COMPLETED: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -135,6 +135,18 @@ def run_test_practice_problem3():
     #             that they are adequate tests!
     ####################################################################
 
+    # Test 15
+    expected = [0, 1, 6]
+    answer = practice_problem3(-4, 3, .75)
+    print('Test 15 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 16
+    expected = [0, 1, 2, 6]
+    answer = practice_problem3(0, 4, -0.50)
+    print('Test 16 expected:', expected)
+    print('       actual:  ', answer)
+
 
 def practice_problem3(start, n, threshold):
     """
@@ -207,8 +219,19 @@ def practice_problem3(start, n, threshold):
       :type n:     int
       :type threshold: float
     """
+
+    sequence = []
+    for k in range():
+        value = math.cos(start) + math.sin(start)
+        if value > threshold:
+            sequence = sequence + [start]
+        start = start + 1
+        if len(sequence) == n:
+            return sequence
+
+
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # COMPLETED: 3. Implement and test this function.
     #          Some tests are already written for you (above),
     #          but you are required to write ADDITIONAL tests (above).
     ####################################################################
